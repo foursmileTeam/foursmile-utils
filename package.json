@@ -1,0 +1,36 @@
+{
+  "name": "foursmile-utils",
+  "version": "1.0.0",
+  "description": "js通用方法库",
+  "main": "index.js",
+  "scripts": {
+    "build:types": "tsc",
+    "build": "npm run build:types && rollup --config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruckey2016/foursmile-utils.git"
+  },
+  "keywords": [
+    "toolkit",
+    "rollup",
+    "typescript"
+  ],
+  "author": "Ruckey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruckey2016/foursmile-utils/issues"
+  },
+  "homepage": "https://github.com/ruckey2016/foursmile-utils#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "rollup": "^2.79.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.3"
+  }
+}
