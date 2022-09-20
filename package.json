@@ -2,6 +2,7 @@
   "name": "foursmile-utils",
   "version": "1.0.0",
   "description": "js通用方法库",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "build:types": "tsc",
