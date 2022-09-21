@@ -1,2 +1,2 @@
 # foursmile-utils
-js通用方法库
+js通用函数库

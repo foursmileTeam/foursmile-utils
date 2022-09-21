@@ -1,9 +1,4 @@
-/**
- * @Author: 谢炉琪
- * @description: 深拷贝
- * @param {Object} obj 需要深拷贝的对象
- * @return {*}
- */
+// 深拷贝
 const deepClone = (obj: Object) => {
   // 不是引用类型或者是null的话直接返回
   if (typeof obj !== "object" || typeof obj == null) {
