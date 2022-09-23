@@ -1,7 +1,7 @@
 {
   "name": "foursmile-utils",
   "version": "1.0.0",
-  "description": "js通用方法库",
+  "description": "js通用函数库",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -12,19 +12,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ruckey2016/foursmile-utils.git"
+    "url": "git+https://github.com/foursmileTeam/foursmile-utils.git"
   },
   "keywords": [
-    "toolkit",
+    "js",
+    "react",
+    "typescript",
     "rollup",
-    "typescript"
+    "plop"
   ],
   "author": "Ruckey",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ruckey2016/foursmile-utils/issues"
+    "url": "https://github.com/foursmileTeam/foursmile-utils.git/issues"
   },
-  "homepage": "https://github.com/ruckey2016/foursmile-utils#readme",
+  "homepage": "https://github.com/foursmileTeam/foursmile-utils.git#readme",
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
