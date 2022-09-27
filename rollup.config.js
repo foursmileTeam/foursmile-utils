@@ -2,7 +2,7 @@
  * @Author: 谢炉琪
  * @Date: 2022-09-19 17:21:39
  * @LastEditors: 谢炉琪
- * @LastEditTime: 2022-09-19 17:21:46
+ * @LastEditTime: 2022-09-27 17:06:35
  * @Description: rollup打包配置
  */
 import resolve from "@rollup/plugin-node-resolve";
@@ -16,7 +16,7 @@ export default {
     // 打包出口
     file: "dist/index.js",
     format: "umd", // umd是兼容amd/cjs/iife的通用打包格式，适合浏览器
-    name: "utilibs", // cdn方式引入时挂载在window上面用的就是这个名字
+    name: "utils", // cdn方式引入时挂载在window上面用的就是这个名字
     sourcemap: true,
   },
   plugins: [
