@@ -2,13 +2,14 @@
  * @Author: 谢炉琪
  * @Date: 2022-09-19 17:21:39
  * @LastEditors: 谢炉琪
- * @LastEditTime: 2022-09-27 17:06:35
+ * @LastEditTime: 2022-09-28 11:57:58
  * @Description: rollup打包配置
  */
 import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import typescript from "rollup-plugin-typescript";
+import { terser } from "rollup-plugin-terser";
 
 export default {
   input: "src/index.ts", // 打包入口
@@ -17,7 +18,7 @@ export default {
     file: "dist/index.js",
     format: "umd", // umd是兼容amd/cjs/iife的通用打包格式，适合浏览器
     name: "utils", // cdn方式引入时挂载在window上面用的就是这个名字
-    sourcemap: true,
+    sourcemap: false,
   },
   plugins: [
     // 打包插件
@@ -25,5 +26,6 @@ export default {
     commonjs(), // 将 CommonJS 转换成 ES2015 模块供 Rollup 处理
     typescript(), // 解析TypeScript
     babel({ babelHelpers: "bundled" }), // babel配置,编译es6
+    terser()
   ],
 };
