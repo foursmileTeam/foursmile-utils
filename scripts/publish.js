@@ -2,7 +2,7 @@
  * @Author: 谢炉琪
  * @Date: 2022-09-20 14:56:54
  * @LastEditors: 谢炉琪
- * @LastEditTime: 2022-09-23 15:16:04
+ * @LastEditTime: 2022-09-29 11:58:46
  * @Description: 修改包名，获取正确的版本号并修改
  */
 
@@ -16,6 +16,7 @@ const fnExiting = fs.readdirSync(path.join(__dirname, '../dist'));
 if (fnExiting) {
   const targetFile = path.resolve(__dirname, '../dist/package.json');
   const packagejson = require(targetFile);
+  const currentName = packagejson.name;
   const currentVersion = packagejson.version;
   const versionArr = currentVersion.split('.');
   const [mainVersion, subVersion, phaseVersion] = versionArr;
@@ -40,7 +41,7 @@ if (fnExiting) {
   }
 
   function publish() {
-    shelljs.sed('-i', '"name": "ktools"', '"name": "@kagol/ktools"', targetFile); // 修改包名
+    shelljs.sed('-i', `"name": "${currentName}"`, '"name": "@foursmile/utils"', targetFile); // 修改包名
     shelljs.sed('-i', `"version": "${currentVersion}"`, `"version": "${newVersion}"`, targetFile); // 修改版本号
     shelljs.cd('dist');
     shelljs.exec('npm publish --access public'); // 发布
